@@ -1,0 +1,175 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #ff907c;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+.washing-mode-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.washing-mode-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.washing-mode-link {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.washing-mode-link:hover {
+  opacity: 0.9;
+}
+
+.washing-mode-item-active .washing-mode-link {
+  opacity: 1;
+}
+
+.washing-mode-notice {
+  max-width: 420px;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.washing-mode-info {
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.washing-mode-controller {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.washing-mode-controller-prev {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.washing-mode-controller-next {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.washing-mode-controller:hover {
+  opacity: 1;
+}
+
+.washing-mode-status {
+  display: flex;
+  margin: 0;
+}
+
+.washing-mode-status-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+}
+
+.washing-mode-status-item-timer {
+  background-color: #555;
+}
+
+.washing-mode-status-item-temperature {
+  background-color: #333;
+}
+
+.washing-mode-status-item-load {
+  background-color: #111;
+}
+
+
+.washing-mode-status-heading {
+  color: #ff907c;
+}
+
+.washing-mode-status-value {
+  margin-left: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.start-button {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  width: 180px;
+  padding: 20px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  transform: translateY(50%);
+  transition: transform 0.4s ease;
+}
+
+.start-button:hover {
+  transform: translateY(45%);
+}
